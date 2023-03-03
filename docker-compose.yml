@@ -1,0 +1,36 @@
+version: "3.7"
+
+volumes:
+  database:
+
+services:
+
+  database:
+    image: mysql/mysql-server
+    # Вот собственно тут и указывается, какие порты будут видны на вашей локали
+    ports:
+      - 3306:3306
+    # Там выше в volumes указывали набор volumes. Используем вольюм database, чтобы хранить БД
+    volumes:
+      - database:/var/lib/data
+    restart: always
+
+    
+  # Backend. Берем образ, что собрали выше
+  backend:
+    image: daniilamark/cars:latest
+    # В Dockerfile мы для гибкости не указывали порт backend-a. Укажем его тут. 
+    expose: 
+      - 8080
+    ports:
+      - 8080:8080
+    restart: always
+
+  # Frontend
+  frontend:
+    image: daniilamark/cars-front:latest
+    expose: 
+      - 3000
+    ports:
+      - 3000:3000
+    restart: always
