@@ -1,15 +1,25 @@
-# Getting Started with Create React App
+# Тестовое задание "Справочник автомобилей" - frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Этот проект был создан с помощью [React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Доступные скрипты
 
-In the project directory, you can run:
+В каталоге проекта вы можете запустить:
+
+### `npm install`
+
+Подтягивает зависимости.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Запускает приложение в режиме разработки.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Откройте [http://localhost:3000](http://localhost:3000), чтобы просмотреть его в браузере.
+
+Страница будет перезагружена после внесения изменений.\
+Вы также можете увидеть любые ошибки lint в консоли.
+
+## Docker
+Так же вы можете [скачать docker образ](https://hub.docker.com/r/daniilamark/cars-front) с dockerhub
+
+### `docker pull daniilamark/cars-front`
